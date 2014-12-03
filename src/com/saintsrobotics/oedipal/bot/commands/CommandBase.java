@@ -2,6 +2,7 @@ package com.saintsrobotics.oedipal.bot.commands;
 
 import com.saintsrobotics.oedipal.bot.OI;
 import com.saintsrobotics.oedipal.bot.subsystems.DriveSubsystem;
+import com.saintsrobotics.oedipal.bot.subsystems.VisionSubsystem;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
@@ -14,7 +15,8 @@ public abstract class CommandBase extends Command {
 
     public static OI oi;
     // Create a single static instance of all of your subsystems
-    public static DriveSubsystem exampleSubsystem = new DriveSubsystem();
+    public static DriveSubsystem driveSubsystem = new DriveSubsystem();
+    public static VisionSubsystem visionSubsystem = new VisionSubsystem();
 
     public static void init() {
         // This MUST be here. If the OI creates Commands (which it very likely
@@ -25,7 +27,7 @@ public abstract class CommandBase extends Command {
         oi = new OI();
 
         // Show what command your subsystem is running on the SmartDashboard
-        SmartDashboard.putData(exampleSubsystem);
+        SmartDashboard.putData(driveSubsystem);
     }
 
     public CommandBase(String name) {
