@@ -2,9 +2,9 @@ package com.saintsrobotics.oedipal.bot.commands;
 
 import com.saintsrobotics.oedipal.bot.OI;
 
-public class TankDrivecommand extends CommandBase {
+public class TankDriveCommand extends CommandBase {
     
-    public TankDrivecommand() {
+    public TankDriveCommand() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
         requires(driveSubsystem);
@@ -17,7 +17,7 @@ public class TankDrivecommand extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        driveSubsystem.setBoth(oi.getAxis(OI.LEFT_Y),oi.getAxis(OI.RIGHT_Y));
+        driveSubsystem.setBoth(oi.getAxis(OI.LEFT_Y), oi.getAxis(OI.RIGHT_Y));
     }
 
     // Make this return true when this Command no longer needs to run execute()

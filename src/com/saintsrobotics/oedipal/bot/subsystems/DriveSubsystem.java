@@ -2,6 +2,7 @@
 package com.saintsrobotics.oedipal.bot.subsystems;
 
 import com.saintsrobotics.oedipal.bot.RobotMap;
+import com.saintsrobotics.oedipal.bot.commands.TankDriveCommand;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -12,7 +13,7 @@ public class DriveSubsystem extends Subsystem {
     SpeedController rightMotor = new Talon(RobotMap.RIGHT_MOTOR);
     
     public void initDefaultCommand() {
-        //setDefaultCommand(new MySpecialCommand());
+        setDefaultCommand(new TankDriveCommand());
     }
     
     public void setBoth(double left, double right) {

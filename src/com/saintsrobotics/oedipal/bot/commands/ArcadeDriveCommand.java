@@ -31,7 +31,6 @@ public class ArcadeDriveCommand extends CommandBase {
     protected void end() {
         driveSubsystem.setLeft(0);
         driveSubsystem.setRight(0);
-        System.out.println("Robot stoped.");
     }
 
     // Called when another command which requires one or more of the same
