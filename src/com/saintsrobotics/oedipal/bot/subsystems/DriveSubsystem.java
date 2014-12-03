@@ -15,8 +15,18 @@ public class DriveSubsystem extends Subsystem {
         //setDefaultCommand(new MySpecialCommand());
     }
     
-    public void tankDrive(double left, double right) {
+    public void setBoth(double left, double right) {
         this.left.set(left);
+        this.right.set(right);
+    }
+    public void setBoth(double both) {
+        this.left.set(both);
+        this.right.set(both);
+    }
+    public void setLeft(double left){
+        this.left.set(left);
+    }
+    public void setRight(double right){
         this.right.set(right);
     }
 }
